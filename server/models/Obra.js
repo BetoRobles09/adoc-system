@@ -14,7 +14,7 @@ const ObraSchema = new mongoose.Schema({
     required: true
   },
   fecha_inicio: {
-    type: String,
+    type: Date,
     required: true
   },
   fecha_fin: {

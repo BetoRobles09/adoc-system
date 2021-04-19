@@ -27,10 +27,6 @@ const ObraSchema = new mongoose.Schema({
   author: { 
     type: mongoose.Schema.Types.ObjectId, 
     ref: 'Usuario' 
-  },
-  conceptos: {
-    type : Array , 
-    default: []
   }
 });
 

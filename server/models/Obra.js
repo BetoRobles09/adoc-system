@@ -27,6 +27,10 @@ const ObraSchema = new mongoose.Schema({
   creador: { 
     type: mongoose.Schema.Types.ObjectId, 
     ref: 'Usuario' 
+  },
+  creado: {
+      type: Date,
+      default: Date.now()
   }
 });
 

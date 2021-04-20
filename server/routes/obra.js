@@ -1,38 +1,43 @@
 const express = require('express');
 const router = express.Router();
 const obraController = require('../controllers/obraController');
-//const auth = require('../middleware/auth');
+const auth = require('../middleware/auth');
 const { check } = require('express-validator');
 
-// Crea proyectos
-// api/proyectos
+// Crea obras
+// api/obras
 router.post('/',
-    [
-        check('nombre', 'El nombre de la obra es obligatorio').not().isEmpty(),
-        check('cliente', 'El nombre del cliente es obligatorio').not().isEmpty(),
+	auth,
+		[
+      check('nombre', 'El nombre de la obra es obligatorio').not().isEmpty(),
+      check('cliente', 'El cliente es obligatorio').not().isEmpty(),
+      check('ubicacion', 'La ubicación es obligatoria').not().isEmpty(),
+      check('fecha_inicio', 'La fecha de inicio es obligatoria').not().isEmpty(),
+      check('fecha_fin', 'La fecha de fin es obligatoria').not().isEmpty()
     ],
-    obraController.crearObra
+  obraController.crearObra
 );
-
-// Obtener todos los proyectos
-/* router.get('/', 
-    auth,
-    proyectoController.obtenerProyectos
+// Obtener todos las obras
+router.get('/', 
+  auth,
+  obraController.obtenerObras
 )
-
-// Actualizar proyecto via ID
+// Actualizar obra via ID
 router.put('/:id', 
-    auth,
-    [
-        check('nombre', 'El nombre del proyecto es obligatoio').not().isEmpty()
+  auth,
+		[
+      check('nombre', 'El nombre de la obra es obligatorio').not().isEmpty(),
+      check('cliente', 'El cliente es obligatorio').not().isEmpty(),
+      check('ubicacion', 'La ubicación es obligatoria').not().isEmpty(),
+      check('fecha_inicio', 'La fecha de inicio es obligatoria').not().isEmpty(),
+      check('fecha_fin', 'La fecha de fin es obligatoria').not().isEmpty()
     ],
-    proyectoController.actualizarProyecto
+  obraController.actualizarObra
+);
+// Eliminar una obra
+router.delete('/:id', 
+  auth,
+  obraController.eliminarObra
 );
 
-// Eliminar un Proyecto
-router.delete('/:id', 
-    auth,
-    proyectoController.eliminarProyecto
-);
-*/
 module.exports = router;

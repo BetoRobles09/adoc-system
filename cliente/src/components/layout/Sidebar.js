@@ -4,10 +4,12 @@ const Sidebar = () => {
   return ( 
     <aside>
       <h1>ADOC <span>Systems</span></h1>
-        <div className="proyectos">
-            <Link className='enlace-cuenta' to='/'>Inicio</Link>
-            <Link className='enlace-cuenta' to='/obras'>Obras</Link>
-        </div>
+      <ul className="listado-proyectos">
+        <li>
+          <Link to='/' className="btn btn-block">Inicio</Link>
+          <Link to='/obras' className="btn btn-block">Obras</Link>
+        </li>
+      </ul>
     </aside>
    )
 }

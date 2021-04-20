@@ -9,9 +9,8 @@ const NuevaObra = () => {
   }
 
   return ( 
-    <div className="formulario">
-      <h2>Agregar una obra</h2>
-      <form onSubmit={onSubmit}>
+      <form className='formulario' onSubmit={onSubmit}>
+        <h2>Agregar una obra</h2>
         <div className="contenedor-input">
           <input type="text" className="input-text" placeholder="Nombre de la obra" name="nombre" />
         </div>
@@ -34,7 +33,6 @@ const NuevaObra = () => {
           <input type="submit" className="btn btn-primario btn-submit btn-block" value='Agregar' />
         </div>
       </form>
-    </div>
    )
 }
 

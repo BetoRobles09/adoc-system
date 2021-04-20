@@ -24,7 +24,7 @@ const ObraSchema = new mongoose.Schema({
   plazo: {
     type: Number
   },
-  author: { 
+  creador: { 
     type: mongoose.Schema.Types.ObjectId, 
     ref: 'Usuario' 
   }

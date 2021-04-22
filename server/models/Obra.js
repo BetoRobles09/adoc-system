@@ -13,11 +13,11 @@ const ObraSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  fecha_inicio: {
+  fechaInicio: {
     type: Date,
     required: true
   },
-  fecha_fin: {
+  fechaFin: {
     type: Date,
     required: true
   },

@@ -12,8 +12,8 @@ router.post('/',
       check('nombre', 'El nombre de la obra es obligatorio').not().isEmpty(),
       check('cliente', 'El cliente es obligatorio').not().isEmpty(),
       check('ubicacion', 'La ubicación es obligatoria').not().isEmpty(),
-      check('fecha_inicio', 'La fecha de inicio es obligatoria').not().isEmpty(),
-      check('fecha_fin', 'La fecha de fin es obligatoria').not().isEmpty()
+      check('fechaInicio', 'La fecha de inicio es obligatoria').not().isEmpty(),
+      check('fechaFin', 'La fecha de fin es obligatoria').not().isEmpty()
     ],
   obraController.crearObra
 );

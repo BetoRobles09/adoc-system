@@ -53,6 +53,7 @@ a {
 /** BOTONES **/
 .btn {
   margin-top: 2rem;
+  margin-right: 1rem;
   font-family: var(--headingFont);
   padding: 1.5rem;
   font-size: 1.4rem;
@@ -165,7 +166,7 @@ aside  {
 
 /** Formulario crear y editar tareas **/
 .formulario {
-  background-color: var(--blanco);
+  background-color: var(--gris1);
   border-radius: 1rem;
   padding: 4rem;
 }
@@ -206,10 +207,12 @@ input[type="date"]:valid:before {
 /** TAREAS LISTADO **/
 .contenedor-tareas {
   padding: 2rem;
+  flex: 1;
 }
 
 .listado-tareas {
-  max-width: 600px;
+  padding-top: 2rem;
+  max-width: 900px;
   margin: 0 auto;
 }
 

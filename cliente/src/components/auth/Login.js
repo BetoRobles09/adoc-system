@@ -13,7 +13,7 @@ const Login = (props) => {
   // En caso de que el password o usuario no exista
   useEffect(() => {
     if(autenticado) {
-      props.history.push('/proyectos')
+      props.history.push('/inicio')
     }
     if(mensaje) {
       mostrarAlerta(mensaje.msg, mensaje.categoria)
